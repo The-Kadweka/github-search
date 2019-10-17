@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Ranga&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
 .jumbotron{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWdNpYd7IfnRnWbIBgjdUaLfQCiLct1SB8mEwflyZku7jO7NAKMw');
+    background-image: url('https://images.pexels.com/photos/1595238/pexels-photo-1595238.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     height:97vh;
     width:100%;
-    font-family: 'Ranga', cursive;
+    font-family: 'Courgette', cursive;
     text-align: center;
 }
