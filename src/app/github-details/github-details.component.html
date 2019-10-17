@@ -20,9 +20,8 @@
                     <img src="{{user.avatar_url}}" alt="avatar" style='width:250px; height:250px;'
                         class="rounded-circle z-depth-8" id="avatar">
                     <br>
-                    <p id='users' class="btn btn-warning" (click)="searchUsers = true"> <a href="{{user.html_url}}"
-                            target="_blank"><button class=" prof-btn">Go to Profile </button></a>
-                    </p>
+                    <div id='users' class="btn btn-warning" (click) "searchUsers = true"> <a href="{{user.html_url}}"
+                            target="_blank"><button class=" prof-btn">Go to Profile </button></a> </div>
 
                 </div>
                 <div class="details to-right">
@@ -40,7 +39,7 @@
                         <a href="{{rep.html_url}}" target="_blank">
                             <h3>{{rep.name}}</h3>
                             <p>{{rep.description}}</p>
-                            <p>{{rep.created_at |dateCount}}</p>
+                            <!-- <p>{{rep.created_at |dateCount}}</p> -->
                         </a>
 
                     </div>
