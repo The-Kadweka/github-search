@@ -20,8 +20,9 @@
                     <img src="{{user.avatar_url}}" alt="avatar" style='width:250px; height:250px;'
                         class="rounded-circle z-depth-8" id="avatar">
                     <br>
-                    <div id='users' class="btn btn-warning" (click) "searchUsers = true"> <a href="{{user.html_url}}"
-                            target="_blank"><button class=" prof-btn">Go to Profile </button></a> </div>
+                    <p id='users' class="btn btn-warning" (click)="searchUsers = true"> <a href="{{user.html_url}}"
+                            target="_blank"><button class=" prof-btn">Go to Profile </button></a>
+                    </p>
 
                 </div>
                 <div class="details to-right">
