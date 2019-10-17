@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiKey:'a6a1278b7187e7cec8978e81d0da498e6b531b5b',
-  baseUrl:''
+  // apiKey:'a6a1278b7187e7cec8978e81d0da498e6b531b5b',
+  // baseUrl:''
 };
 
 /*

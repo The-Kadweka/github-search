@@ -3,24 +3,19 @@ import { User } from '../classes/user';
 import { Repo } from '../classes/repos';
 import { environment } from '../../environments/environment'
 import { HttpClient } from '@angular/common/http'
-
-
 @Injectable()
 export class ServiceRequestService {
-  user:User;
-  repo:Repo;
-  private userName:string;
-
-  apiKey:string = environment.apiKey;
-  baseUrl:string = environment.baseUrl;
-
-  constructor(private http:HttpClient) {
-    this.user = new User ('', '', '', '', 0, 0, 0);
+  user: User;
+  repo: Repo;
+  private userName: string;
+  apiKey: string = 'a6a1278b7187e7cec8978e81d0da498e6b531b5b';
+  // baseUrl:string = environment.baseUrl;
+  constructor(private http: HttpClient) {
+    this.user = new User('', '', '', '', 0, 0, 0);
     this.repo = new Repo('', '', '');
-    this.userName = 'hussein001';
-   }
-
-   getUser() {
+    this.userName = 'hussein18149';
+  }
+  getUser() {
     interface ApiResponse {
       login: string;
       avatar_url: string;
@@ -31,9 +26,9 @@ export class ServiceRequestService {
       following: number;
     }
     const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + this.apiKey )
-      .toPromise()
-      .then(res => {
+      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '?access_token=' + this.apiKey)
+        .toPromise()
+        .then(res => {
           this.user.login = res.login;
           this.user.avatar_url = res.avatar_url;
           this.user.html_url = res.html_url;
@@ -42,15 +37,13 @@ export class ServiceRequestService {
           this.user.following = res.following;
           this.user.public_repos = res.public_repos;
         },
-        error => {
-
-      reject(error);
-    });
+          error => {
+            reject(error);
+          });
     }));
     return promise;
   }
-
-  getRepos(username:any) {
+  getRepos(username: any) {
     interface ApiResponse {
       name: string;
       html_url: string;
@@ -58,8 +51,7 @@ export class ServiceRequestService {
     }
     return Promise;
   }
-  getUsername(username:string){
+  getUsername(username: string) {
     this.userName = username;
   }
-
 }
